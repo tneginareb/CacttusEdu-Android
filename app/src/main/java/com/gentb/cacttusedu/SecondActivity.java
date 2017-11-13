@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.View;
+import android.widget.ImageButton;
 
 /**
  * Created by gentberani on 10/23/17.
@@ -13,6 +15,8 @@ public class SecondActivity extends Activity {
 
     private boolean itsMonday;
     private String titulli;
+
+    private ImageButton backButton;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -24,16 +28,24 @@ public class SecondActivity extends Activity {
         System.out.println("itsMonday value: " + itsMonday);
         System.out.println("titulli value: " + titulli);
 
+        backButton = (ImageButton) findViewById(R.id.backButton);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
     }
 
     @Override
     public void onBackPressed() {
 //        super.onBackPressed();
         System.out.println("onBackPressed");
-
         Intent intent = new Intent();
-        intent.putExtra("eenjte",true);
-        setResult(Activity.RESULT_OK,intent);
+        intent.putExtra("eenjte", true);
+        setResult(Activity.RESULT_OK, intent);
+        System.out.println("HEL");
         finish();
     }
 
