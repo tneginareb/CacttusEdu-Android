@@ -21,15 +21,12 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        b1 = findViewById(R.id.clickMeButton);
+        b1 = findViewById(R.id.gotoButton);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-                intent.putExtra("itsMonday", true);
-                intent.putExtra("titulli", "Aktiviteti Sekondar");
-                //startActivity(intent);
-                startActivityForResult(intent, MAIN_REQUEST_CODE);
+                Intent gotoIntent = new Intent(MainActivity.this, MultiSupportActivity.class);
+                startActivity(gotoIntent);
             }
         });
     }
@@ -55,4 +52,12 @@ public class MainActivity extends Activity {
         b1 = b1;
     }
 
+    //Unused method
+    private void gotoSecondActivity() {
+        Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+        intent.putExtra("itsMonday", true);
+        intent.putExtra("titulli", "Aktiviteti Sekondar");
+        //startActivity(intent);
+        startActivityForResult(intent, MAIN_REQUEST_CODE);
+    }
 }

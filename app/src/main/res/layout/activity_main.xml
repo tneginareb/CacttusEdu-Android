@@ -6,17 +6,17 @@
 
 
     <Button
-        android:id="@+id/clickMeButton"
-        android:layout_width="@dimen/button_size"
-        android:layout_height="@dimen/button_size"
-        android:text="@string/test_string"
+        android:id="@+id/gotoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:text="@string/go_to_multisupport" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/clickMeButton"
+        android:layout_below="@+id/gotoButton"
         android:layout_margin="15dp"
         android:background="@color/colorPrimary"
         android:orientation="horizontal"

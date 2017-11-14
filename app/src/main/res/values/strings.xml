@@ -3,4 +3,8 @@
     <string name="click_me_please">Click me, please!</string>
     <string name="aktiviteti_i_dyte">Aktiviteti i Dyte</string>
     <string name="test_string">X</string>
+    <string name="landscape_text">Landscape</string>
+    <string name="phone_text">Portrait</string>
+    <string name="go_to_multisupport">Go to multisupport Screen</string>
+    <string name="tablet_text">Tablet</string>
 </resources>
