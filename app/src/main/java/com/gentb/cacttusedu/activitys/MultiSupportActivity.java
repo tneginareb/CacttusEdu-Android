@@ -1,9 +1,11 @@
-package com.gentb.cacttusedu;
+package com.gentb.cacttusedu.activitys;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.widget.SeekBar;
+
+import com.gentb.cacttusedu.R;
 
 /**
  * Created by gentberani on 11/13/17.

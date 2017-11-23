@@ -1,4 +1,4 @@
-package com.gentb.cacttusedu;
+package com.gentb.cacttusedu.activitys;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
+
+import com.gentb.cacttusedu.R;
 
 /**
  * Created by gentberani on 11/20/17.
