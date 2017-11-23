@@ -21,4 +21,7 @@ public class Person {
         return age;
     }
 
+    public String getName() {
+        return name;
+    }
 }

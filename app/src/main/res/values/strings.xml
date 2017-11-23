@@ -11,4 +11,5 @@
     <string name="startText">Start</string>
     <string name="stopText">Stop</string>
     <string name="resetText">Reset</string>
+    <string name="put_name_here">Put name here!</string>
 </resources>
