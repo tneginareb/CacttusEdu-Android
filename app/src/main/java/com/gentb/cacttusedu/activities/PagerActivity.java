@@ -1,4 +1,4 @@
-package com.gentb.cacttusedu.activitys;
+package com.gentb.cacttusedu.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
