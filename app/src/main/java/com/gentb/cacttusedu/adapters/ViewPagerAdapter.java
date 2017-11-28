@@ -13,7 +13,7 @@ import com.gentb.cacttusedu.R;
 import org.w3c.dom.Text;
 
 /**
- * Created by Ndriqim Haxhaj on 11/27/2017.
+ * Created by gentberani on 11/27/2017.
  */
 
 public class ViewPagerAdapter extends PagerAdapter {

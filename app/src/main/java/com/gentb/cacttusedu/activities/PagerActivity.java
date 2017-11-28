@@ -9,7 +9,7 @@ import com.gentb.cacttusedu.R;
 import com.gentb.cacttusedu.adapters.ViewPagerAdapter;
 
 /**
- * Created by Ndriqim Haxhaj on 11/27/2017.
+ * Created by gentberani on 11/27/2017.
  */
 
 public class PagerActivity extends Activity {
