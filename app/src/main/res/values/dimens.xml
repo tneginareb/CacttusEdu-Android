@@ -3,4 +3,6 @@
     <dimen name="main_button_width">160dp</dimen>
     <dimen name="stopwatchTextMargin">15dp</dimen>
     <dimen name="startButtonWidth">250dp</dimen>
+    <dimen name="menu_margin">40dp</dimen>
+    <dimen name="opencloseMargin">25dp</dimen>
 </resources>

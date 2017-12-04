@@ -14,4 +14,5 @@
     <string name="put_name_here">Put name here!</string>
     <string name="top_text">SecondActivity</string>
     <string name="bottom_text">CustomViewActivity</string>
+    <string name="open_close_menu">Open/Close menu</string>
 </resources>
