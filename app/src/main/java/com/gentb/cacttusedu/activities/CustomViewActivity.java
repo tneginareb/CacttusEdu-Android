@@ -42,4 +42,5 @@ public class CustomViewActivity extends Activity {
             }
         });
     }
+
 }

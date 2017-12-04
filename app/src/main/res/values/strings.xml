@@ -12,4 +12,6 @@
     <string name="stopText">Stop</string>
     <string name="resetText">Reset</string>
     <string name="put_name_here">Put name here!</string>
+    <string name="top_text">SecondActivity</string>
+    <string name="bottom_text">CustomViewActivity</string>
 </resources>
