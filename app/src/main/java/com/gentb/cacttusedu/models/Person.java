@@ -1,5 +1,7 @@
 package com.gentb.cacttusedu.models;
 
+import java.util.ArrayList;
+
 /**
  * Created by gentberani on 11/23/17.
  */
@@ -23,5 +25,32 @@ public class Person {
 
     public String getName() {
         return name;
+    }
+
+
+    public static ArrayList<Person> getDummyArray() {
+        ArrayList<Person> persons = new ArrayList<>();
+        Person person = new Person(1, 19,
+                "Arianit", "Bobaj");
+        persons.add(person);
+
+        person = new Person(2, 21,
+                "Meriton", "Ferati");
+        persons.add(person);
+
+        person = new Person(3, 23,
+                "Ndriqim", "Haxhaj");
+        persons.add(person);
+
+
+        person = new Person(4, 20,
+                "Endrit", "Zhuri");
+        persons.add(person);
+
+
+        person = new Person(5, 24,
+                "Arlind", "Rexhepi");
+        persons.add(person);
+        return persons;
     }
 }

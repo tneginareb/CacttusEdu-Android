@@ -60,6 +60,7 @@ public class PersonsAdapter extends BaseAdapter {
             holder = new Holder();
             holder.personName = (TextView) view.findViewById(R.id.personName);
 
+            view.setTag(holder);
         } else {
             holder = (Holder) view.getTag();
         }
