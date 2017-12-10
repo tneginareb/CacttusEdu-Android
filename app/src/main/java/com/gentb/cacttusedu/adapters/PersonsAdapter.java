@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.gentb.cacttusedu.R;
 import com.gentb.cacttusedu.models.Person;
@@ -53,7 +54,7 @@ public class PersonsAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View view, ViewGroup viewGroup) {
+    public View getView(final int position, View view, ViewGroup viewGroup) {
         Holder holder;
         if (view == null) {
             view = mInflater.inflate(R.layout.person_cell, viewGroup, false);
@@ -66,7 +67,14 @@ public class PersonsAdapter extends BaseAdapter {
         }
 
         Person person = persons.get(position);
-        holder.personName.setText(person.getName() +" Position: "+position);
+        holder.personName.setText(person.getName() + " Position: " + position);
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "" + position, Toast.LENGTH_SHORT).show();
+            }
+        });
 
         return view;
     }

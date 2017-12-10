@@ -36,41 +36,17 @@ public class ListViewActivity extends Activity {
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Person person = new Person(3, 26,
+                        "Emri", "Mbiemri");
+                persons.add(person);
+                adapter.notifyDataSetChanged();
             }
         });
 
     }
 
     private void fillPersonsArray() {
-        Person person = new Person(1, 19,
-                "Arianit", "Bobaj");
-        persons.add(person);
-
-        person = new Person(2, 21,
-                "Meriton", "Ferati");
-        persons.add(person);
-
-        person = new Person(3, 23,
-                "Ndriqim", "Haxhaj");
-        persons.add(person);
-
-
-        person = new Person(4, 20,
-                "Endrit", "Zhuri");
-        persons.add(person);
-
-
-        person = new Person(5, 24,
-                "Arlind", "Rexhepi");
-        persons.add(person);
-        persons.add(person);
-        persons.add(person);
-        persons.add(person);
-        persons.add(person);
-        persons.add(person);
-        persons.add(person);
-        persons.add(person);
-        persons.add(person);
+        persons = Person.getDummyArray();
 
         System.out.println("Persons size: " + this.persons.size());
     }
