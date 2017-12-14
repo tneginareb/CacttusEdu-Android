@@ -10,11 +10,11 @@ import com.gentb.cacttusedu.R;
  * Created by gentberani on 12/11/17.
  */
 
-public class FragmentHolder extends FragmentActivity {
+public class FragmentHolderStatic extends FragmentActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_holder);
+        setContentView(R.layout.fragment_holder_static);
     }
 }

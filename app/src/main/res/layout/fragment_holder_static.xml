@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <fragment
+        android:id="@+id/fragmentOne"
+        android:name="com.gentb.cacttusedu.fragments.FragmentOne"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        tools:layout="@layout/fragment_one" />
+
+    <fragment
+        android:id="@+id/fragmentOne1"
+        android:name="com.gentb.cacttusedu.fragments.FragmentOne"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/fragmentOne"
+        tools:layout="@layout/fragment_one" />
+
+    <fragment
+        android:id="@+id/fragmentOne2"
+        android:name="com.gentb.cacttusedu.fragments.FragmentOne"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/fragmentOne1"
+        tools:layout="@layout/fragment_one" />
+</RelativeLayout>
