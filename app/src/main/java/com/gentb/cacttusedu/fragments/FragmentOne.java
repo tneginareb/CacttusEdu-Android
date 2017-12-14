@@ -7,9 +7,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.gentb.cacttusedu.R;
-import com.gentb.cacttusedu.activities.FragmentHolderStatic;
 
 /**
  * Created by gentberani on 12/11/17.
@@ -18,6 +18,8 @@ import com.gentb.cacttusedu.activities.FragmentHolderStatic;
 public class FragmentOne extends Fragment {
 
     //private FragmentHolderStatic fragmentHolder;
+    private int counter = 0;
+    private TextView textView;
 
     @Override
     public void onAttach(Context context) {
@@ -32,6 +34,11 @@ public class FragmentOne extends Fragment {
         super.onCreate(savedInstanceState);
         System.out.println("Lifecycle: onCreate");
 
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            counter = bundle.getInt("counter", 0);
+        }
+
     }
 
     @Nullable
@@ -39,7 +46,8 @@ public class FragmentOne extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_one, container, false);
         System.out.println("Lifecycle: onCreateView");
-
+        textView = view.findViewById(R.id.textView);
+        textView.setText("Counter: " + counter);
         return view;
 
     }

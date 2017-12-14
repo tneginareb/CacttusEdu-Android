@@ -18,6 +18,7 @@ import com.gentb.cacttusedu.fragments.FragmentOne;
 public class FragmentHolderDynamic extends FragmentActivity {
 
     private FragmentManager fragmentManager;
+    private static int counter = 0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,6 +31,13 @@ public class FragmentHolderDynamic extends FragmentActivity {
                 showFragmentOne();
             }
         });
+
+        ((Button) findViewById(R.id.buttonBack)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                backButtonPressed();
+            }
+        });
     }
 
     private void setupFragmentManager() {
@@ -37,13 +45,23 @@ public class FragmentHolderDynamic extends FragmentActivity {
     }
 
     private void showFragmentOne() {
+
         final FragmentTransaction transaction = fragmentManager.beginTransaction();
 
         final FragmentOne fragmentOne = new FragmentOne();
 
+        Bundle bundle = new Bundle();
+        bundle.putInt("counter", counter);
+        fragmentOne.setArguments(bundle);
+
         transaction.add(R.id.container, fragmentOne, "FragmentOne");
+        transaction.addToBackStack("Stack01");
         transaction.commit();
+        ++counter;
     }
 
+    private void backButtonPressed() {
+        fragmentManager.popBackStack();
+    }
 
 }
