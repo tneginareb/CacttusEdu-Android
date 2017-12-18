@@ -23,7 +23,7 @@ public class ServiceActivity extends Activity {
 
 
     @SuppressLint("StaticFieldLeak")
-    @Overridegit
+    @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_service);
