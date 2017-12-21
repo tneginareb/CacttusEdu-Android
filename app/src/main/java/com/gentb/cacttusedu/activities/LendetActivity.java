@@ -3,8 +3,11 @@ package com.gentb.cacttusedu.activities;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.view.View;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 
 import com.gentb.cacttusedu.R;
 import com.gentb.cacttusedu.adapters.LendetAdapter;
@@ -25,17 +28,19 @@ public class LendetActivity extends Activity {
     private ArrayList<Lenda> lendet = new ArrayList<>();
     private ListView listView;
     private LendetAdapter adapter;
+    private ProgressBar progressBar;
 
     @SuppressLint("StaticFieldLeak")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lendet);
+        progressBar = findViewById(R.id.progressBar);
         listView = findViewById(R.id.listView);
         adapter = new LendetAdapter(getApplicationContext(), lendet);
         listView.setAdapter(adapter);
         initializeServiceObjects();
-        requestLendetData();
+        //requestLendetData();
     }
 
     private void initializeServiceObjects() {
@@ -46,9 +51,16 @@ public class LendetActivity extends Activity {
                     lendet.addAll(inLendet);
                     adapter.notifyDataSetChanged();
                 }
+                progressBar.setVisibility(View.GONE);
             }
         };
-
+        progressBar.setVisibility(View.VISIBLE);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                requestLendetData();
+            }
+        },2500);
         lendetTask = new LendetTask(lendetCallback);
     }
 
