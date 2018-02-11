@@ -43,6 +43,7 @@ public class LendetActivity extends Activity {
         //requestLendetData();
     }
 
+
     private void initializeServiceObjects() {
         lendetCallback = new LendetCallback() {
             @Override
@@ -60,7 +61,7 @@ public class LendetActivity extends Activity {
             public void run() {
                 requestLendetData();
             }
-        },2500);
+        }, 1500);
         lendetTask = new LendetTask(lendetCallback);
     }
 

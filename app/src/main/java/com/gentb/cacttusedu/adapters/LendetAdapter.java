@@ -66,14 +66,14 @@ public class LendetAdapter extends BaseAdapter {
             holder = (Holder) view.getTag();
         }
 
-        Lenda lenda = lendet.get(position);
+        final Lenda lenda = lendet.get(position);
         holder.lendaTitle.setText(lenda.getTitulli());
         holder.personName.setText(lenda.getProfesori());
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "" + position, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "ID E LENDES ESHTE: " + lenda.getId(), Toast.LENGTH_SHORT).show();
             }
         });
 

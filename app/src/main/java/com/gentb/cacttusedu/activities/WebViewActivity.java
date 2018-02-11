@@ -8,6 +8,7 @@ import android.webkit.WebViewClient;
 import android.widget.Toast;
 
 import com.gentb.cacttusedu.R;
+import com.gentb.cacttusedu.models.Person;
 
 /**
  * Created by gentberani on 12/4/17.
@@ -21,8 +22,8 @@ public class WebViewActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_webview);
-        webView = (WebView) findViewById(R.id.webView);
 
+        webView = (WebView) findViewById(R.id.webView);
         webView.setWebViewClient(new WebViewClient());
         webView.getSettings().setJavaScriptEnabled(true);
         webView.loadUrl("http://www.imdb.com");
@@ -31,8 +32,6 @@ public class WebViewActivity extends Activity {
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
-
-
             }
         });
     }
